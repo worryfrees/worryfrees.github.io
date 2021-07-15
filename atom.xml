@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>worryfrees.com</id>
+    <title>Worryfree</title>
+    <updated>2021-07-15T10:22:25.050Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="worryfrees.com"/>
+    <link rel="self" href="worryfrees.com/atom.xml"/>
+    <subtitle>这里是我的个人网站，我在这里记录和分享！！！</subtitle>
+    <logo>https://gitee.com/telegraph/Scripts/raw/master/Blog/favicon.ico</logo>
+    <icon>https://gitee.com/telegraph/Scripts/raw/master/Blog/favicon.ico</icon>
+    <rights>All rights reserved 2021, Worryfree</rights>
+    <entry>
+        <title type="html"><![CDATA[Surge解锁网易云灰色歌曲]]></title>
+        <id>https://worryfrees.com/surge-unblocknetsase</id>
+        <link href="https://worryfrees.com/surge-unblocknetsase"/>
+        <updated>2021-07-16T00:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[BBR]]></title>
+        <id>https://worryfrees.com/bbr</id>
+        <link href="https://worryfrees.com/bbr"/>
+        <updated>2021-07-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[所有脚本请自行安装Curl、Wget等，代码如下
+yum -y install wget    #ContOS 安装 wget
+apt-get install wget   #Debian Ubuntu 安装 wget
+yum -y ins...]]></summary>
+        <content type="html"><![CDATA[<h2 id="所有脚本请自行安装Curl、Wget等，代码如下">所有脚本请自行安装Curl、Wget等，代码如下</h2>
+<pre>yum -y install wget    #ContOS 安装 wget
+apt-get install wget   #Debian Ubuntu 安装 wget
+yum -y install curl    #ContOS 安装 curl
+apt-get install curl   #Debian Ubuntu 安装 crul</pre>
+<h2 id="Debian CentOS 开启自带BBR加速">Debian CentOS 开启自带BBR加速</h2>
+<pre>echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+lsmod | grep bbr
+</pre>
+<h2 id="四合一 BBR Plus / 原版BBR / 魔改BBR （推荐）">四合一 BBR Plus / 原版BBR / 魔改BBR （推荐）</h2>
+</p><pre><code>
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</code></pre><p>]]></content>
+    </entry>
+</feed>
